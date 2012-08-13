@@ -1,0 +1,13 @@
+{% extends "layout.html" %}
+{% block body %}
+<ul class=items>
+  {% for item in items %}
+  <li><a href="{{ url_for('item', id=item.id) }}">{{ item.title }}</a>
+    <form action="{{ url_for('del_item', id=item.id) }}"
+          method=post class=delete>
+      <input type=submit value=delete />
+    </form>
+  </li>
+  {% endfor %}
+</ul>
+{% endblock %}

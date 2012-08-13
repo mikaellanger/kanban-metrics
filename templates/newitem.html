@@ -1,0 +1,26 @@
+{% extends "layout.html" %}
+{% block body %}
+<form action="{{ url_for('post_item') }}" method=post class=form>
+  <dl>
+    <dt>Title:</dt>
+    <dd><input type=text size=30 name=title></dd>
+    <dt>Type:</dt>
+    <dd>
+      <select name=type>
+        {% for type in types %}
+        <option value={{ type.id }}>{{ type.name }}</option>
+        {% endfor %}
+      </select>
+    </dd>
+    <dt>Size:</dt>
+    <dd>
+      <select name=size>
+        {% for size in sizes %}
+        <option value={{ size.id }}>{{ size.name }}</option>
+        {% endfor %}
+      </select>
+    </dd>
+    <dd><input type=submit value=Add class=submit></dd>
+  </dl>
+</form>
+{% endblock %}

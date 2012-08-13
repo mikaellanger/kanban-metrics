@@ -1,0 +1,20 @@
+<!doctype html>
+<title>Project metrics</title>
+<link rel=stylesheet type=text/css
+      href="{{ url_for('static', filename='style.css') }}">
+<div class=page>
+  <h1>Project metrics</h1>
+  <div class=metanav>
+    <ul>
+      <li><a href="/">Stats</a></li>
+      <li><a href="{{ url_for('new_item') }}">Add</a></li>
+      <li><a href="{{ url_for('list_items') }}">List</a></li>
+    </ul>
+  </div>
+  {% for category, message in get_flashed_messages(with_categories=true) %}
+    <div class="{{ category }}">{{ message }}</div>
+  {% endfor %}
+  <div class=body>
+  {% block body %}{% endblock %}
+  </div>
+</div>

@@ -1,0 +1,25 @@
+{% extends "layout.html" %}
+{% block body %}
+<div class=dash>
+  {% for type, s in stats %}
+    <h2>{{ type }}</h2>
+    <table>
+      <tr>
+        <th />
+        {% for size in sizes %}
+          <th>{{ size }}</th>
+        {% endfor %}
+      </tr>
+      {% for title, values in s %}
+        <tr>
+          <td>{{ title }}</td>
+          {% for size in sizes %}
+            <td>{{ values[size] }}</td>
+          {% endfor %}
+        </tr>
+      {% endfor %}
+    </table>
+  {% endfor %}
+
+</div>
+{% endblock %}

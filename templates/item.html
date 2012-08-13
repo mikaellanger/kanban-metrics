@@ -1,0 +1,36 @@
+{% extends "layout.html" %}
+{% block body %}
+<div class=item>
+  <h2>{{ item.type }}: {{ item.title }} ({{ item.size }})</h2>
+</dl>
+
+<ul>
+  {% for t in transitions %}
+  <li href="#">
+    <span class=date>{{ t.date }}</span>
+    <span class=state>{{ t.state }}</span>
+    <form action="{{ url_for('del_transition', iid=item.id, tid=t.id) }}"
+          method=post class=delete>
+      <input type=submit value=delete />
+    </form>
+  </li>
+  {% endfor %}
+</ul>
+</div>
+
+<form action="{{ url_for('add_transition', id=item.id) }}"
+      method=post class=form>
+  <dl>
+    <dt>State:<dt>
+    <dd><select name=state>
+          {% for state in states %}
+          <option value={{ state.id }}>{{ state.name }}</option>
+          {% endfor %}
+        </select></dd>
+    <dt>Date:</dt>
+    <dd><input type=text size=12 name=date></dd>
+    <dd><input type=submit value=Add></dd>
+  </dl>
+</form>
+
+{% endblock %}

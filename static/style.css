@@ -1,0 +1,43 @@
+body            { font-family: Helvetica, sans-serif; font-size: 1.8em; background: #fff; }
+a, h1, h2       { color: #000; }
+h1, h2          { font-family: 'Georgia', serif; margin: 0; }
+h1              { border-bottom: 2px solid #eee; }
+h2              { font-size: 1.2em; margin-top: 0.5em; margin-bottom: 0.2em; }
+dl              { margin: 0; padding: 0; }
+input, select   { font-size: 100%; }
+input.submit         { font-size: 4em; }
+
+.page           { margin: 2em auto; width: 35em;
+                  padding: 0.8em; background: white; }
+.body           { margin: 0.5em; }
+
+.dash dt        { float: left; clear: left; margin-right: 0.5em; }
+.dash td        { min-width: 2em; text-align: right; }
+
+.items          { list-style: none; margin: 0; padding: 0; }
+.items li a     { text-decoration: none; }
+
+.item           { border-bottom: 1px solid #ccc; font-size: 0.7em; }
+.item ul        { list-style: none; list-style-type: none;
+                  padding: 0; }
+.item .date     { display: inline-block; width: 6em; }
+
+.form dl        { font-size: 0.6em; margin-top: 1em; }
+.form dd        { margin: 0; padding: 0; margin-bottom: 1em; }
+
+.metanav        { font-size: 0.8em; padding: 0.1em;
+                  margin-bottom: 1em; background: #fafafa; }
+.metanav a      { text-decoration: none; }
+.metanav ul     { list-style: none; padding: 0; margin: 0.5em; }
+.metanav li     { display: inline-block; padding: 0; list-style: none;
+                  list-style-type: none; margin-right: 0.5em; }
+
+.message        { background: #CEE5F5; padding: 0.3em;
+                  border: 1px solid #AACBE2; font-size: 0.7em; }
+.error          { background: #F0D6D6; padding: 0.3em; font-size: 0.7em; }
+
+.delete         { display: none; }
+.delete input   { border: 0; background: transparent; display: inline;
+                  text-decoration: underline; margin:0; padding: 0; }
+.item li:hover .delete,
+.items li:hover .delete { display: inline; }
